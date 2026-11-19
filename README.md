@@ -17,8 +17,7 @@ Made for the CEN 311 Web Technologies and Programming midterm, using only HTML, 
 - Every workout has a status: Done, Planned, or Missed (planned, but the date has passed, shown in red)
 - The Done button marks a planned workout as done, and Undo puts it back. The Delete button removes a workout
 - Workouts are shown in a table with the latest date first, so planned workouts are on top
-- The top of the page shows the workouts done, how many were in the last 7 days, how many are planned,
-  and the total kilograms lifted (weight x sets x reps, added up for done workouts)
+- The top of the page shows the workouts done, how many were in the last 7 days, and how many are planned
 - Workouts are saved in the browser, so they are still there after a reload
 
 ## Files

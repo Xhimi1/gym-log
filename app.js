@@ -15,7 +15,6 @@ const dateInput = document.getElementById("date");
 const doneCount = document.getElementById("done-count");
 const weekCount = document.getElementById("week-count");
 const plannedCount = document.getElementById("planned-count");
-const volumeCount = document.getElementById("volume-count");
 const emptyMessage = document.getElementById("empty-message");
 
 // Small icons (SVG drawings) for the buttons
@@ -87,16 +86,13 @@ function showWorkouts() {
     emptyMessage.classList.add("hidden");
   }
 
-  // The four numbers at the top
+  // The three numbers at the top
   let done = 0;
   let thisWeek = 0;
   let planned = 0;
-  let volume = 0;
   for (const workout of workouts) {
     if (workout.done) {
       done++;
-      // weight x sets x reps = the total kilograms lifted
-      volume += workout.weight * workout.sets * workout.reps;
       if (isInLastDays(workout.date, 7)) {
         thisWeek++;
       }
@@ -107,7 +103,6 @@ function showWorkouts() {
   doneCount.textContent = done;
   weekCount.textContent = thisWeek;
   plannedCount.textContent = planned;
-  volumeCount.textContent = Math.round(volume).toLocaleString("en-US");
 }
 
 function saveAndShow() {
