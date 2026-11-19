@@ -26,16 +26,20 @@
 
     <header class="section">
       <h1>My workouts</h1>
-      <p class="muted">Write down what you lifted today.</p>
+      <p class="muted">Write down what you lifted, or plan a workout for a day in the future.</p>
 
       <div class="stats">
         <div class="stat">
-          <span class="stat-number" id="total-count">0</span>
-          <span class="muted">workouts</span>
+          <span class="stat-number" id="done-count">0</span>
+          <span class="muted">workouts done</span>
         </div>
         <div class="stat">
           <span class="stat-number" id="week-count">0</span>
           <span class="muted">in the last 7 days</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" id="planned-count">0</span>
+          <span class="muted">planned</span>
         </div>
         <div class="stat">
           <span class="stat-number" id="volume-count">0</span>
@@ -45,7 +49,8 @@
     </header>
 
     <section class="section">
-      <h2>Add a workout</h2>
+      <h2>Add or plan a workout</h2>
+      <p class="muted hint">A date in the past or today is saved as done. A date in the future is saved as planned.</p>
       <form id="workout-form" novalidate>
         <div class="field">
           <input class="input" type="text" id="exercise" placeholder="Exercise, for example: bench press" aria-label="Exercise">
@@ -87,7 +92,7 @@
 
         <button class="button button-primary" type="submit">
           <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-          Add workout
+          Save workout
         </button>
       </form>
     </section>
@@ -102,12 +107,13 @@
             <th>Weight</th>
             <th>Sets x reps</th>
             <th>Date</th>
+            <th>Status</th>
             <th></th>
           </tr>
         </thead>
         <tbody id="workout-list"></tbody>
       </table>
-      <p class="muted" id="empty-message">No workouts yet. Add your first one above.</p>
+      <p class="muted" id="empty-message">No workouts yet. Add or plan your first one above.</p>
     </section>
 
   </main>
