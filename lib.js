@@ -41,6 +41,10 @@ function isAfterToday(dateText) {
   return dateText > todayAsText();
 }
 
+function isBeforeToday(dateText) {
+  return dateText < todayAsText();
+}
+
 // True when the date is today or in the last (days - 1) days before it
 function isInLastDays(dateText, days) {
   return dateText >= daysAgoAsText(days - 1) && dateText <= todayAsText();
