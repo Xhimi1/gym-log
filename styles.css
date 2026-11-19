@@ -1,0 +1,432 @@
+/* styles.css
+   A small set of reusable classes. Flat design: no gradients,
+   no shadows, small corners, lots of white space. */
+
+/* Colors and sizes in one place */
+:root {
+  --text: #222222;
+  --muted: #777777;
+  --line: #dddddd;
+  --accent: #d9480f;
+  --accent-hover: #b83c0b;
+  --tint: #fdf3ee;
+  --red: #a61b1b;
+  --corner: 3px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: #ffffff;
+}
+
+/* Layout */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px 96px 24px;
+}
+
+.wide {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  margin-bottom: 72px;
+}
+
+/* Text */
+h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+h2 {
+  margin: 0 0 24px 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+p {
+  margin: 0 0 8px 0;
+}
+
+a {
+  color: inherit;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.red {
+  color: var(--red);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Icons (small drawings made with SVG) */
+.icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -3px;
+}
+
+.icon-big {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+/* Navigation bar */
+.navbar {
+  border-bottom: 1px solid var(--line);
+  background: #ffffff;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.logo .icon {
+  width: 22px;
+  height: 22px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  padding: 4px 0;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+.nav-link.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+/* Hero (dark band) */
+.hero-band {
+  color: #ffffff;
+  background: #1c1c1c;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-title {
+  margin: 0 0 24px 0;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-sub {
+  max-width: 460px;
+  margin: 0 0 40px 0;
+  font-size: 18px;
+  color: #b5b5b5;
+}
+
+.hero-art {
+  flex: 1;
+  max-width: 420px;
+}
+
+.hero-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* How it works */
+.how {
+  padding: 96px 0;
+}
+
+.how-title {
+  margin-bottom: 48px;
+  font-size: 28px;
+}
+
+.steps {
+  display: flex;
+  gap: 48px;
+}
+
+.step {
+  flex: 1;
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  color: var(--accent);
+  background: var(--tint);
+  border-radius: var(--corner);
+}
+
+.how-end {
+  margin-top: 64px;
+}
+
+/* Footer */
+.footer {
+  padding: 32px 0;
+  color: var(--muted);
+  font-size: 14px;
+  border-top: 1px solid var(--line);
+}
+
+/* Numbers at the top of the planner */
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.stat {
+  min-width: 140px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--corner);
+}
+
+.stat-number {
+  display: block;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+/* Form */
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.row .field {
+  flex: 1;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--text);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--corner);
+}
+
+.input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 0;
+}
+
+.input-bad {
+  border-color: var(--red);
+}
+
+.error {
+  min-height: 22px;
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: var(--red);
+}
+
+/* Buttons (work on <button> and on <a>) */
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--corner);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #f4f4f4;
+}
+
+.button-primary {
+  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.button-primary:hover {
+  background: var(--accent-hover);
+}
+
+.button-ghost {
+  color: #ffffff;
+  background: transparent;
+  border-color: #666666;
+}
+
+.button-ghost:hover {
+  background: #2c2c2c;
+}
+
+.button-big {
+  margin-right: 12px;
+  padding: 14px 28px;
+  font-size: 17px;
+}
+
+.button-small {
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.button-small .icon {
+  width: 15px;
+  height: 15px;
+  vertical-align: -2px;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 16px 12px 16px 0;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.table th {
+  font-weight: normal;
+  color: var(--muted);
+}
+
+.table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Small screens */
+@media (max-width: 760px) {
+  .container {
+    padding: 40px 16px 64px 16px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-art {
+    width: 100%;
+  }
+
+  .steps {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+  }
+
+  .button-big {
+    margin-bottom: 12px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  /* Let the table scroll sideways instead of breaking */
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+}
